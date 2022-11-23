@@ -9,6 +9,7 @@
 <body>
     <div>
         <h2><%= pokemon.name %></h2>
+        
         <div>
             <img src="<%= pokemon.img %>">
         </div>
@@ -27,6 +28,9 @@
                 Defense: <%= pokemon.stats.defense %>
         </div>     
     </div>
+    <br>    
+
+    <a href="/pokedex/<%=pokemon.id%>/edit"><button>Edit</button></a>
     
 </body>
 </html>
