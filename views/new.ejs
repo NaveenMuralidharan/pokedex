@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex App</title>
+</head>
+<body>
+    <h3>Create new pokemon: </h3>
+     <form action="/pokedex" method="post">
+        <label>
+            Name: <input type="text" name="name">
+        </label>
+        <br>
+        <label>
+            imageUrl: <input type="text" name="img">
+        </label>
+        <br>
+        <label>
+            Types (separate each type with a space): <input type="text" name="types">
+        </label>
+        <br>
+        <label>
+            Stats:
+            <br>
+            HP: <input type="number" name="hp">
+            <br>
+            ATTACK: <input type="number" name="attack">
+            <br>
+            DEFENSE: <input type="number" name="defense">
+        </label>
+        <br>
+        <input type="submit" value="Create pokemon">
+     </form>
+</body>
+</html>

@@ -7,12 +7,18 @@
     <title>Pokedex App</title>
 </head>
 <body>
+    <nav>
+        <a href="/pokedex/new"><button>New Pokemon</button></a>
+    </nav>
     <h2>Pokedex</h2>
+
     <% pokedex.forEach((pokemon)=>{ %>
     <article>
-            <img src="<%= pokemon.img %>">
-            Name: <%= pokemon.name %>
-            <a href="/pokedex/<%=pokemon.id%>"><button>Show</button></a>
+            <a href="/pokedex/<%=pokemon.id%>">
+                <img src="<%= pokemon.img %>" >
+            </a> 
+        Name: <%= pokemon.name %>
+            
     </article>
     <% }) %>
 </body>

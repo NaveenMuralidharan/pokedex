@@ -7,6 +7,26 @@
     <title>Pokedex App</title>
 </head>
 <body>
-    <h2><%= pokemon.name %></h2>
+    <div>
+        <h2><%= pokemon.name %></h2>
+        <div>
+            <img src="<%= pokemon.img %>">
+        </div>
+        <ul> Types:
+            <% pokemon.type.forEach((type)=>{ %>
+                <li><%= type %></li>    
+            <% }) %>   
+        </ul>
+        <div>
+            Stats:
+                <br>
+                HP: <%= pokemon.stats.hp %>
+                <br>
+                Attack: <%= pokemon.stats.attack %>
+                <br>
+                Defense: <%= pokemon.stats.defense %>
+        </div>     
+    </div>
+    
 </body>
 </html>
