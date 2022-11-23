@@ -58,8 +58,12 @@ console.log(newPokemon)
 // edit route
 app.get("/pokedex/:id/edit", (req, res)=>{
 
+
+
     pokedex.forEach((pokemon)=>{
+        
         if(pokemon.id === req.params.id){
+     
             res.render("edit.ejs", { pokemon })
         }
     })
@@ -67,7 +71,17 @@ app.get("/pokedex/:id/edit", (req, res)=>{
 
 })
 
+// update route:
+app.put("/pokedex/:id", (req, res)=>{
+    console.log(req.body)
+    pokedex.forEach((pokemon, i)=>{
+        if(pokemon.id === req.params.id){
+            pokedex[i] = req.body
+            res.redirect("/pokedex") 
+        }
+    })
 
+})
 
 // show route
 app.get('/pokedex/:id', (req, res)=>{

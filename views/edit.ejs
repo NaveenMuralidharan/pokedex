@@ -8,5 +8,15 @@
 </head>
 <body>
     <h3>Edit Pokemon</h3>
+    <form action="/pokedex/<%=pokemon.id%>/?_method=PUT" method="POST">
+
+        Name: <input type="text" name="name" value="<%=pokemon.name%>">
+        <br>
+        Image source: <input type="text" name="img" value="<%=pokemon.img%>">
+        <br>
+        
+        <input type="submit" value="Edit">
+
+    </form>
 </body>
 </html>
